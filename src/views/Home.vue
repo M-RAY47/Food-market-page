@@ -57,13 +57,12 @@
 </template>
 
 <script>
-import food from '../food.json';
 
 export default {
   name: 'Home',
+  props: ['inventory'],
   data() {
     return {
-      inventory: food,
     };
   },
 };
