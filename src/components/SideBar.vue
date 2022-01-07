@@ -52,6 +52,30 @@
 export default {
   name: 'SideBar',
   props: ['toggle', 'cart', 'inventory'],
+  computed: {
+    totalItems() {
+      return Object.values(this.cart).reduce((acc, curr) => {
+        return acc + curr;
+      }, 0);
+    },
+  },
+  methods: {
+    getPrice(name) {
+      const food = this.inventory.find((product) => {
+        return product.name === name;
+      });
+      return food.price.USD;
+    },
+    removeItem(name) {
+      delete this.cart[name];
+    },
+    calculateTotal() {
+      const total = Object.entries(this.cart).reduce((acc, item) => {
+        return acc + (item[1] * this.getPrice(item[0]));
+      }, 0);
+      return total.toFixed(2);
+    },
+  },
 };
 
 </script>
