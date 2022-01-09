@@ -70,9 +70,8 @@ export default {
       delete this.cart[name];
     },
     calculateTotal() {
-      const total = Object.entries(this.cart).reduce((acc, item) => {
-        return acc + (item[1] * this.getPrice(item[0]));
-      }, 0);
+      const total = Object.entries(this.cart)
+        .reduce((acc, item) => acc + (item[1] * this.getPrice(item[0])), 0);
       return total.toFixed(2);
     },
   },
