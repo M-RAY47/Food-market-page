@@ -54,16 +54,12 @@ export default {
   props: ['toggle', 'cart', 'inventory'],
   computed: {
     totalItems() {
-      return Object.values(this.cart).reduce((acc, curr) => {
-        return acc + curr;
-      }, 0);
+      return Object.values(this.cart).reduce((acc, curr) => acc + curr, 0);
     },
   },
   methods: {
     getPrice(name) {
-      const food = this.inventory.find((product) => {
-        return product.name === name;
-      });
+      const food = this.inventory.find((product) => product.name === name);
       return food.price.USD;
     },
     removeItem(name) {
