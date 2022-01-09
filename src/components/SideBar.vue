@@ -51,7 +51,7 @@
 <script>
 export default {
   name: 'SideBar',
-  props: ['toggle', 'cart', 'inventory'],
+  props: ['toggle', 'cart', 'inventory', 'totalItemsCart'],
   computed: {
     totalItems() {
       return Object.values(this.cart).reduce((acc, curr) => acc + curr, 0);

@@ -23,6 +23,7 @@
     :toggle="toggleSideBar"
     :cart="cart"
     :inventory="inventory"
+    :totalItems="totalItemsCart"
   />
 </template>
 
