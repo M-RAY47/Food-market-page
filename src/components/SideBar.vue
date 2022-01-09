@@ -52,11 +52,6 @@
 export default {
   name: 'SideBar',
   props: ['toggle', 'cart', 'inventory'],
-  computed: {
-    totalItems() {
-      return Object.values(this.cart).reduce((acc, curr) => acc + curr, 0);
-    },
-  },
   methods: {
     getPrice(name) {
       const food = this.inventory.find((product) => product.name === name);

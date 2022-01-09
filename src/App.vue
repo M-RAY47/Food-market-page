@@ -23,7 +23,6 @@
     :toggle="toggleSideBar"
     :cart="cart"
     :inventory="inventory"
-    :totalItems="totalItems"
   />
 </template>
 
@@ -41,6 +40,11 @@ export default {
       inventory: food,
       cart: {},
     };
+  },
+  computed: {
+    totalItems() {
+      return Object.values(this.cart).reduce((acc, curr) => acc + curr, 0);
+    },
   },
   methods: {
     addToCart(name, index) {
