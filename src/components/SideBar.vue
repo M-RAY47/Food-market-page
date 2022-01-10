@@ -29,7 +29,7 @@
               <td class="center">{{ food }}</td>
               <td>\${{ (food *getPrice(key)).toFixed(2) }}</td>
               <td class="center">
-                <button @click="removeItem(key)" class="btn btn-light cart-remove">
+                <button @click="remove(key)" class="btn btn-light cart-remove">
                   &times;
                 </button>
               </td>
@@ -51,14 +51,11 @@
 <script>
 export default {
   name: 'SideBar',
-  props: ['toggle', 'cart', 'inventory'],
+  props: ['toggle', 'cart', 'inventory', 'remove'],
   methods: {
     getPrice(name) {
       const food = this.inventory.find((product) => product.name === name);
       return food.price.USD;
-    },
-    removeItem(name) {
-      delete this.cart[name];
     },
     calculateTotal() {
       const total = Object.entries(this.cart)

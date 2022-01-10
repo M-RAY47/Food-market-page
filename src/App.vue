@@ -23,6 +23,7 @@
     :toggle="toggleSideBar"
     :cart="cart"
     :inventory="inventory"
+    :remove="removeItem"
   />
 </template>
 
@@ -54,6 +55,9 @@ export default {
     },
     toggleSideBar() {
       this.showSidebar = !this.showSidebar;
+    },
+    removeItem(name) {
+      delete this.cart[name];
     },
   },
 };
