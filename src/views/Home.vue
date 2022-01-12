@@ -60,7 +60,7 @@
 
 export default {
   name: 'Home',
-  props: ['inventory'],
+  props: ['inventory', 'addToCart'],
   data() {
     return {
     };
