@@ -51,7 +51,7 @@
 <script>
 export default {
   name: 'SideBar',
-  props: ['toggle', 'cart', 'inventory', 'remove'],
+  props: ['toggle', 'cart', 'inventory', 'remove', 'showSidebar'],
   methods: {
     getPrice(name) {
       const food = this.inventory.find((product) => product.name === name);
