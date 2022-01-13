@@ -16,7 +16,8 @@
         :key="product.id"
         :index="index"
         :product="product"
-        
+        :addToCart="addTocart"
+        class="card"
       />
 
     </div>
