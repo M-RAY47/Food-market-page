@@ -5,8 +5,13 @@
     <div class="card-container">
       <router-view/>
       <ProductCart
-        v-for="(product) in inventory.slice(0, 6)" :key="product.id"
-        />
+        v-for="(product, index) in inventory.slice(0,6)"
+        :key="product.id"
+        :index="index"
+        :product="product"
+        :addToCart="addTocart"
+        class="card"
+      />
     </div>
   </main>
 </template>
