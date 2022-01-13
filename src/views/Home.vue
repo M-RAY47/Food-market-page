@@ -14,6 +14,8 @@
       <ProductCart
         v-for="(product, index) in inventory.slice(0,3)"
         :key="product.id"
+        :index="index"
+        :product="product"
         
       />
 
