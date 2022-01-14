@@ -9,7 +9,7 @@
         :key="product.id"
         :index="index"
         :product="product"
-        :addToCart="addTocart"
+        :addToCart="addToCart"
         class="card"
       />
     </div>
