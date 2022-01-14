@@ -16,7 +16,7 @@
         :key="product.id"
         :index="index"
         :product="product"
-        :addToCart="addTocart"
+        :addToCart="addToCart"
         class="card"
       />
 
@@ -27,11 +27,12 @@
 
 <script>
 import ProductCart from '@/components/ProductCart.vue';
+
 export default {
   name: 'Home',
   props: ['inventory', 'addToCart'],
   components: {
-    ProductCart
+    ProductCart,
   },
   data() {
     return {
