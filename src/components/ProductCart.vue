@@ -41,7 +41,7 @@
 <script>
 export default {
   name: 'ProductCart',
-  props: ['inventory', 'addToCart'],
+  props: ['inventory', 'addToCart', 'remove     '],
 };
 
 </script>

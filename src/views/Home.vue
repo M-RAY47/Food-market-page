@@ -19,7 +19,6 @@
         :addToCart="addToCart"
         class="card"
       />
-
     </div>
 
   </main>
