@@ -10,6 +10,7 @@
         :index="index"
         :product="product"
         :addToCart="addToCart"
+        :remove="remove"
         class="card"
       />
     </div>
