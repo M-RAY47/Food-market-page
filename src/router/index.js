@@ -6,7 +6,7 @@ import PastOrders from '../views/PastOrders.vue';
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'home',
     component: Home,
   },
   {
@@ -15,7 +15,7 @@ const routes = [
     component: Products,
   },
   {
-    path: '/Past-orders',
+    path: '/past-orders',
     name: 'PastOrders',
     component: PastOrders,
   },

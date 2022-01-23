@@ -22,7 +22,7 @@ import ProductCart from '../components/ProductCart.vue';
 
 export default {
   name: 'Products',
-  props: ['food', 'invetory'],
+  props: ['food', 'invetory', 'remove'],
   components: [ProductCart],
 };
 
