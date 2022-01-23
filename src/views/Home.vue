@@ -17,6 +17,7 @@
         :index="index"
         :product="product"
         :addToCart="addToCart"
+        :remove="removeItem"
         class="card"
       />
     </div>
@@ -29,7 +30,7 @@ import ProductCart from '@/components/ProductCart.vue';
 
 export default {
   name: 'Home',
-  props: ['inventory', 'addToCart'],
+  props: ['inventory', 'addToCart', 'remove'],
   components: {
     ProductCart,
   },
