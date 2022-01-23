@@ -3,7 +3,6 @@
     <h1>Products</h1>
 
     <div class="card-container">
-      <router-view/>
       <ProductCart
         v-for="(product, index) in inventory.slice(0,6)"
         :key="product.id"
@@ -22,8 +21,10 @@ import ProductCart from '../components/ProductCart.vue';
 
 export default {
   name: 'Products',
-  props: ['food', 'invetory', 'remove'],
-  components: [ProductCart],
+  props: ['inventory', 'remove', 'addToCart'],
+  components: {
+    ProductCart,
+  },
 };
 
 </script>
