@@ -17,7 +17,6 @@
         :index="index"
         :product="product"
         :addToCart="addToCart"
-        :remove="removeItem"
         class="card"
       />
     </div>
